@@ -1,4 +1,5 @@
-import Phaser from '../lib/phaser.js'
+import Phaser from '../lib/phaser.js';
+import Carrot from '../game/carrot.js'
 
 export default class Game extends Phaser.Scene {
     player; platforms; cursors
@@ -11,6 +12,7 @@ export default class Game extends Phaser.Scene {
 
     preload()
     {
+
         //load image background
         this.load.image('background', './assets/PNG/Background/bg_layer1.png')
 
@@ -19,6 +21,9 @@ export default class Game extends Phaser.Scene {
 
         //load player image
         this.load.image('bunny-stand', './assets/PNG/Players/bunny1_stand.png')
+
+        //load carrot image
+        this.load.image('carrot', 'assets/PNG/Items/carrot.png')
 
         //create user input
         this.cursors = this.input.keyboard.createCursorKeys()
