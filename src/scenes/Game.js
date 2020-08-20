@@ -76,7 +76,11 @@ export default class Game extends Phaser.Scene {
 
         console.log(this.scale.width)
 
+        //create the carrot
+        const carrot = new Carrot(this, 240, 320, 'carrot')
+        this.add.existing(carrot)
 
+        
     }
 
 
